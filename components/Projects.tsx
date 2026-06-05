@@ -13,12 +13,12 @@ const projects = [
       "A planned visual resume tailoring platform that maps resumes to job descriptions and generates ATS-aware edits through a node-based workflow.",
     tech: ["Next.js", "Node.js", "LLMs", "PDF Parsing"],
   },
-  {
-    title: "Real-Time ML Pipeline",
-    status: "Coming Soon",
+    {
+    title: "Driver Drowsiness Detection",
+    status: "Legacy Upgrade",
     description:
-      "A planned streaming ML pipeline project for ingesting, processing, and serving real-time event data.",
-    tech: ["Kafka", "Spark", "Airflow", "MLflow"],
+      "Computer vision project for detecting driver fatigue using facial cues, eye tracking logic, and real-time alert mechanisms.",
+    tech: ["Python", "OpenCV", "Computer Vision", "ML"],
   },
 ];
 
@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative z-10 mx-auto max-w-7xl px-6 py-28"
+      className="relative z-10 mx-auto max-w-7xl px-6 pt-8 pb-24"
     >
       <div className="max-w-3xl">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
@@ -34,7 +34,7 @@ export default function Projects() {
         </p>
 
         <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
-          Projects built around real AI systems.
+          Projects built around AI - ML, and real-world systems.
         </h2>
 
         <p className="mt-6 text-lg leading-8 text-gray-400">

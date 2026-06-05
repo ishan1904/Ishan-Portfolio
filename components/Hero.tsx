@@ -5,7 +5,7 @@ import HeroVisual from "./HeroVisual";
 
 export default function Hero() {
   return (
-    <section className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-center gap-16 px-6 py-28 lg:grid-cols-2">
+    <section className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-start gap-16 px-6 py-28 pb-16 lg:grid-cols-2">
       {/* Left content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
