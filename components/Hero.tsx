@@ -17,18 +17,17 @@ export default function Hero() {
           AI/ML Engineer
         </p>
 
-          <h1 className="text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl xl:text-6xl">
-          Building{" "}
+        <h1 className="text-5xl font-bold leading-[0.95] tracking-tight md:text-5xl xl:text-6xl">
+          Turning{" "}
           <span className="bg-gradient-to-r from-cyan-300 via-white to-purple-300 bg-clip-text text-transparent">
-            AI/ML systems
+            data, models, and LLMs
           </span>{" "}
-          that turn data into real-world impact.
+          into production-ready intelligence.
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400 md:text-xl">
-        I build intelligent systems that combine machine learning, NLP, generative AI,
-        data pipelines, and MLOps to turn complex data into reliable, user-facing
-        products.
+        I build AI/ML systems that connect machine learning, generative AI, data
+        pipelines, and MLOps into reliable products people can actually use.
       </p>
       
         <div className="mt-10 flex flex-wrap gap-4">
