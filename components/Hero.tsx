@@ -17,19 +17,24 @@ export default function Hero() {
           AI/ML Engineer
         </p>
 
-        <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-          Building reliable AI systems for real-world workflows.
+          <h1 className="text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl xl:text-6xl">
+          Building{" "}
+          <span className="bg-gradient-to-r from-cyan-300 via-white to-purple-300 bg-clip-text text-transparent">
+            AI/ML systems
+          </span>{" "}
+          that turn data into real-world impact.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-          I design production-grade AI/ML systems across LLM workflows,
-          document intelligence, data pipelines, and MLOps.
-        </p>
-
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400 md:text-xl">
+        I build intelligent systems that combine machine learning, NLP, generative AI,
+        data pipelines, and MLOps to turn complex data into reliable, user-facing
+        products.
+      </p>
+      
         <div className="mt-10 flex flex-wrap gap-4">
           <a
             href="#projects"
-            className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
+            className="rounded-full bg-gradient-to-r from-cyan-300 to-purple-300 px-6 py-3 text-sm font-semibold text-black shadow-[0_0_40px_rgba(34,211,238,0.35)] transition hover:scale-105"
           >
             View Projects
           </a>
