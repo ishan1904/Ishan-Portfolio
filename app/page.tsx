@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Background from "@/components/Background";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Skills/>
       <Projects/>
+      <Experience/>
     </main>
 
   );
