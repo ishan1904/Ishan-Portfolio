@@ -8,18 +8,34 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
 
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <Background />
-      <Navbar />
-      <Hero />
-      <Skills/>
-      <Projects/>
-      <Experience/>
-      <Contact/>
+      <Reveal>
+        <Background />
+      </Reveal>
+      <Reveal>
+        <Navbar />
+      </Reveal>
+      <Reveal>
+        <Hero />
+      </Reveal>
+      <Reveal>
+        <Skills/>
+      </Reveal>
+      <Reveal>
+        <Projects/>
+      </Reveal>
+      <Reveal>
+        <Experience/>
+      </Reveal>
+      <Reveal>
+        <Contact/>
+      </Reveal>
+      
     </main>
 
   );
