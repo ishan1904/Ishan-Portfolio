@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative z-10 mx-auto max-w-7xl px-6 py-24"
+      className="relative z-10 mx-auto max-w-7xl px-6 pt-12 pb-24"
     >
       <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur-xl md:p-12">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">

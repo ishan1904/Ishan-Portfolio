@@ -1,4 +1,4 @@
-const navItems = ["Projects", "Experience", "Skills", "Resume"];
+const navItems = ["Skills", "Projects", "Experience"];
 
 export default function Navbar() {
   return (
@@ -13,7 +13,7 @@ export default function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm text-gray-400 transition hover:text-white"
+              className="relative text-sm text-gray-400 transition hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-300 after:to-purple-300 after:transition-all after:duration-300 hover:after:w-full"
             >
               {item}
             </a>

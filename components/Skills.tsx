@@ -46,7 +46,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative z-10 mx-auto max-w-7xl px-6 py-20 pb-16"
+      className="relative z-10 mx-auto max-w-7xl px-6 pt-8 pb-20"
     >
       <div className="max-w-3xl">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
