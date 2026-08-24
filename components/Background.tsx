@@ -1,3 +1,5 @@
+import NeuralFlow from "@/components/NeuralFlow";
+
 export default function Background() {
   return (
     <>
@@ -6,6 +8,8 @@ export default function Background() {
 
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0d_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0d_1px,transparent_1px)] bg-[size:80px_80px]" />
 
+      <NeuralFlow />
+      
       <div className="absolute inset-0 bg-black/60" />
     </>
   );
