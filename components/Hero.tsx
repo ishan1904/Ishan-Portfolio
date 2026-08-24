@@ -39,7 +39,8 @@ export default function Hero() {
           </a>
 
           <a
-            href="#resume"
+            href="/Ishan_Rajvi_AI_ML.pdf"
+            target="_blank"
             className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
           >
             View Resume

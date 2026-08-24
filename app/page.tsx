@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Skills from "@/components/Skills";
 import Navbar from "@/components/navbar";
 import Background from "@/components/Background";

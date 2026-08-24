@@ -87,11 +87,15 @@ export default function Projects() {
               </a>
 
               <a
-                href="#"
+                href="https://github.com/ishan1904/academic-assistant"
                 className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 GitHub
               </a>
+
+              <span className="rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-gray-500">
+                Demo Coming Soon
+              </span>
             </div>
           </div>
 
