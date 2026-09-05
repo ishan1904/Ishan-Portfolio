@@ -26,12 +26,6 @@ const skillCards = [
   },
 ];
 
-const metrics = [
-  ["Data Ingestion", "92%"],
-  ["Feature Engineering", "86%"],
-  ["Model Serving", "94%"],
-  ["Monitoring", "89%"],
-];
 
 export default function HeroVisual() {
   return (
@@ -49,6 +43,56 @@ export default function HeroVisual() {
         <div className="absolute left-1/2 top-12 h-[460px] w-[460px] -translate-x-1/2 rounded-full border border-purple-400/20" />
         <div className="absolute left-1/2 top-24 h-[350px] w-[350px] -translate-x-1/2 rounded-full border border-cyan-300/20" />
 
+        {/* Capability connections */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 620 470"
+          className="pointer-events-none absolute inset-0 z-[5] h-full w-full"
+        >
+          <defs>
+            <linearGradient id="flowCyan" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#67e8f9" stopOpacity="0.08" />
+              <stop offset="100%" stopColor="#67e8f9" stopOpacity="0.45" />
+            </linearGradient>
+
+            <linearGradient id="flowViolet" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#d8b4fe" stopOpacity="0.08" />
+              <stop offset="100%" stopColor="#d8b4fe" stopOpacity="0.4" />
+            </linearGradient>
+          </defs>
+
+          {/* Left capabilities → intelligence */}
+          <path
+            d="M 170 120 C 220 125, 235 165, 285 190"
+            fill="none"
+            stroke="url(#flowCyan)"
+            strokeWidth="1"
+          />
+
+          <path
+            d="M 170 340 C 220 330, 235 285, 285 255"
+            fill="none"
+            stroke="url(#flowCyan)"
+            strokeWidth="1"
+          />
+
+          {/* Right capabilities → intelligence */}
+          <path
+            d="M 450 120 C 400 125, 385 165, 335 190"
+            fill="none"
+            stroke="url(#flowViolet)"
+            strokeWidth="1"
+          />
+
+          <path
+            d="M 450 340 C 400 330, 385 285, 335 255"
+            fill="none"
+            stroke="url(#flowViolet)"
+            strokeWidth="1"
+          />
+        </svg>
+        
+        
         {/* Neural AI/ML centerpiece */}
       <motion.div
       initial={{ opacity: 0, scale: 0.92 }}
@@ -91,7 +135,7 @@ export default function HeroVisual() {
             ease: "easeInOut",
           },
         }}
-          className={`absolute z-20 w-52 rounded-2xl border border-white/10 bg-white/[0.08] p-4 shadow-2xl backdrop-blur-xl ${card.className}`}
+          className={`absolute z-20 w-48 rounded-2xl border border-white/[0.08] bg-white/[0.055] p-4 shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl ${card.className}`}
         >
             <p className="text-sm font-semibold text-white">{card.title}</p>
             <p className="mt-2 text-xs leading-5 text-gray-400">{card.text}</p>
@@ -99,45 +143,111 @@ export default function HeroVisual() {
         ))}
       </div>
 
-      {/* Bottom production monitor */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.9 }}
-        className="absolute bottom-0 z-30 w-[560px] rounded-[2rem] border border-white/10 bg-black/55 p-6 shadow-[0_0_70px_rgba(34,211,238,0.16)] backdrop-blur-2xl"
-      >
-        <div className="mb-5 flex items-center justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
-              Production Monitor
-            </p>
-            <h3 className="mt-2 text-xl font-semibold text-white">
-              ML / LLM Pipeline
-            </h3>
-          </div>
+    {/* Bottom production system */}
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, delay: 0.9 }}
+      className="absolute bottom-0 left-[-150px] z-30 w-[620px] rounded-[2rem] border border-white/10 bg-black/70 p-6 shadow-[0_0_60px_rgba(34,211,238,0.12)] backdrop-blur-2xl"
+    >
+      {/* Header */}
+      <div className="mb-7">
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
+            Production AI/ML System
+          </p>
 
-          <p className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">
-            Live
+          <h3 className="mt-2 text-xl font-semibold text-white">
+            Intelligence, engineered end to end.
+          </h3>
+        </div>
+      </div>
+
+      {/* Pipeline stages */}
+      <div className="grid grid-cols-4 gap-4">
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-white/35">
+            Data
+          </p>
+          <p className="mt-2 text-sm font-medium text-white">
+            Pipelines
+          </p>
+          <p className="mt-1 text-xs leading-5 text-white/45">
+            Spark · Airflow
           </p>
         </div>
 
-        {metrics.map(([label, width]) => (
-          <div key={label} className="mb-4 last:mb-0">
-            <div className="mb-2 flex justify-between text-xs">
-              <span className="text-gray-400">{label}</span>
-              <span className="text-gray-500">{width}</span>
-            </div>
+        <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-cyan-400/[0.08] to-purple-400/[0.08] blur-xl" />
 
-            <div className="h-2 overflow-hidden rounded-full bg-white/10">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width }}
-                transition={{ duration: 1.2, delay: 1.1 }}
-                className="h-full rounded-full bg-gradient-to-r from-cyan-300 to-purple-300"
-              />
-            </div>
-          </div>
-        ))}
+        <div className="relative">
+          <p className="text-[10px] uppercase tracking-[0.18em] text-cyan-300/70">
+            Intelligence
+          </p>
+
+          <p className="mt-2 text-sm font-semibold text-white">
+            ML / LLM
+          </p>
+
+          <p className="mt-1 text-xs leading-5 text-white/50">
+            Models · RAG
+          </p>
+        </div>
+
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-white/35">
+            Serving
+          </p>
+          <p className="mt-2 text-sm font-medium text-white">
+            Production APIs
+          </p>
+          <p className="mt-1 text-xs leading-5 text-white/45">
+            FastAPI · Docker
+          </p>
+        </div>
+
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-white/35">
+            Observe
+          </p>
+          <p className="mt-2 text-sm font-medium text-white">
+            Monitoring
+          </p>
+          <p className="mt-1 text-xs leading-5 text-white/45">
+            MLflow · Metrics
+          </p>
+        </div>
+      </div>
+
+        {/* System flow */}
+        <div className="relative mt-6 h-px bg-white/10">
+
+          {/* Permanent gradient path */}
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-300/30 via-purple-300/30 to-cyan-300/20" />
+
+          {/* Pipeline nodes */}
+          <div className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.7)]" />
+
+          <div className="absolute left-1/3 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-300 shadow-[0_0_18px_rgba(216,180,254,0.8)]" />
+
+          <div className="absolute left-2/3 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/80" />
+
+          <div className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-cyan-300/60" />
+
+          {/* Traveling signal */}
+          <motion.div
+            className="absolute top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_14px_rgba(103,232,249,0.95),0_0_28px_rgba(216,180,254,0.55)]"
+            animate={{
+              left: ["0%", "33%", "66%", "100%"],
+              opacity: [0, 1, 1, 0],
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              repeatDelay: 2.5,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

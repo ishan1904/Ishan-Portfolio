@@ -10,10 +10,10 @@ export default function Hero() {
       {/* Localized neural transition */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-0 z-0 h-[280px] w-[58%] overflow-hidden opacity-50
-        [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]
-        [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]"
-      >
+        className="pointer-events-none absolute bottom-0 left-0 z-0 h-[320px] w-[72%] overflow-hidden opacity-50
+        [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_80%,transparent)]
+        [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_15%,black_80%,transparent)]"
+              >
         <NeuralFlow />
       </div>
       {/* Left content */}
