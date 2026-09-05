@@ -2,10 +2,20 @@
 
 import { motion } from "framer-motion";
 import HeroVisual from "./HeroVisual";
+import NeuralFlow from "./NeuralFlow";
 
 export default function Hero() {
   return (
     <section className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-start gap-16 px-6 py-28 pb-16 lg:grid-cols-2">
+      {/* Localized neural transition */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 z-0 h-[280px] w-[58%] overflow-hidden opacity-50
+        [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]
+        [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]"
+      >
+        <NeuralFlow />
+      </div>
       {/* Left content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

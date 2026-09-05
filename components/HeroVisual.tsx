@@ -1,26 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const skillCards = [
   {
-    title: "LLMs",
-    text: "GPT-4, Claude, RAG",
-    className: "left-0 top-8",
+    title: "Machine Learning",
+    text: "Predictive modeling · CV · time-series",
+    className: "left-0 top-10",
   },
   {
-    title: "NLP",
-    text: "Transformers, LangChain",
-    className: "right-0 top-8",
+    title: "Generative AI",
+    text: "LLMs · RAG · agents · transformers",
+    className: "right-0 top-10",
   },
   {
-    title: "MLOps",
-    text: "MLflow, Docker, Kubernetes",
+    title: "Data & MLOps",
+    text: "Pipelines · MLflow · Docker · Kubernetes",
     className: "left-0 top-64",
   },
   {
-    title: "Data",
-    text: "Spark, Airflow, BigQuery",
+    title: "Cloud & Production",
+    text: "AWS · Azure · APIs · monitoring",
     className: "right-0 top-64",
   },
 ];
@@ -48,37 +49,48 @@ export default function HeroVisual() {
         <div className="absolute left-1/2 top-12 h-[460px] w-[460px] -translate-x-1/2 rounded-full border border-purple-400/20" />
         <div className="absolute left-1/2 top-24 h-[350px] w-[350px] -translate-x-1/2 rounded-full border border-cyan-300/20" />
 
-        {/* Temporary AI core. Later this becomes ai-head.png */}
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute left-1/2 top-24 z-10 flex h-72 w-72 -translate-x-1/2 items-center justify-center rounded-full border border-purple-300/30 bg-gradient-to-br from-purple-500/20 via-cyan-400/10 to-black shadow-[0_0_120px_rgba(168,85,247,0.45)] backdrop-blur-xl"
-        >
-          <div className="absolute h-44 w-44 rounded-full bg-cyan-300/10 blur-2xl" />
-          <div className="relative text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-cyan-200">
-              Applied
-            </p>
-            <h3 className="mt-3 bg-gradient-to-r from-cyan-200 to-purple-300 bg-clip-text text-5xl font-bold text-transparent">
-              AI
-            </h3>
-            <p className="mt-2 text-xs text-gray-400">systems core</p>
-          </div>
-        </motion.div>
+        {/* Neural AI/ML centerpiece */}
+      <motion.div
+      initial={{ opacity: 0, scale: 0.92 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        duration: 1.2,
+        delay: 0.4,
+        ease: "easeOut",
+      }}
+        className="absolute left-1/2 top-12 z-10 h-[390px] w-[390px] -translate-x-1/2"
+      >
+        <div className="absolute inset-6 rounded-full bg-cyan-400/10 blur-[70px]" />
+
+        <Image
+          src="/ai-neural-head.png"
+          alt="Abstract neural network profile representing AI and machine learning systems"
+          fill
+          priority
+          className="object-contain opacity-90 scale-x-[-1]"
+        />
+      </motion.div>
 
         {skillCards.map((card, index) => (
         <motion.div
           key={card.title}
           initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: [0, -8, 0] }}
+          animate={{ opacity: 1, y: -3 }}
           transition={{
-            opacity: { duration: 0.8, delay: 0.5 + index * 0.12 },
-            y: {
-              duration: 4 + index * 0.4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            },
-          }}
+          opacity: {
+            duration: 0.8,
+            delay: 0.5 + index * 0.12,
+          },
+          y: {
+            duration: 4.5 + index * 0.5,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+          },
+        }}
           className={`absolute z-20 w-52 rounded-2xl border border-white/10 bg-white/[0.08] p-4 shadow-2xl backdrop-blur-xl ${card.className}`}
         >
             <p className="text-sm font-semibold text-white">{card.title}</p>

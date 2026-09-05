@@ -1,13 +1,24 @@
 const skillGroups = [
   {
-    title: "AI / ML",
+    title: "Machine Learning",
     skills: [
-      "Machine Learning",
+      "Predictive Modeling",
       "Deep Learning",
+      "Computer Vision",
+      "Time-Series",
+      "Reinforcement Learning",
+      "Scikit-learn",
+    ],
+  },
+  {
+    title: "Generative AI & NLP",
+    skills: [
       "LLMs",
-      "NLP",
       "RAG",
       "Transformers",
+      "LangChain",
+      "LangGraph",
+      "Hugging Face",
     ],
   },
   {
@@ -15,17 +26,19 @@ const skillGroups = [
     skills: [
       "PySpark",
       "Airflow",
-      "ETL Pipelines",
+      "Databricks",
+      "ETL / ELT",
       "Snowflake",
       "BigQuery",
     ],
   },
   {
-    title: "MLOps",
+    title: "MLOps & Deployment",
     skills: [
       "MLflow",
       "Docker",
       "Kubernetes",
+      "Kubeflow",
       "CI/CD",
       "Monitoring",
     ],
@@ -35,9 +48,21 @@ const skillGroups = [
     skills: [
       "AWS",
       "Azure",
+      "IBM Cloud",
       "FastAPI",
       "Flask",
       "REST APIs",
+    ],
+  },
+  {
+    title: "Responsible AI",
+    skills: [
+      "SHAP",
+      "LIME",
+      "Bias Mitigation",
+      "Model Explainability",
+      "Privacy-aware ML",
+      "Model Governance",
     ],
   },
 ];

@@ -11,31 +11,26 @@ import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
-
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <Reveal>
-        <Background />
-      </Reveal>
-      <Reveal>
-        <Navbar />
-      </Reveal>
-      <Reveal>
-        <Hero />
-      </Reveal>
-      <Reveal>
-        <Skills/>
-      </Reveal>
-      <Reveal>
-        <Projects/>
-      </Reveal>
-      <Reveal>
-        <Experience/>
-      </Reveal>
-      <Reveal>
-        <Contact/>
-      </Reveal>
-      
-    </main>
+      <Background />
+      <Navbar />
+      <Hero />
 
+      <Reveal>
+        <Skills />
+      </Reveal>
+
+      <Reveal>
+        <Projects />
+      </Reveal>
+
+      <Reveal>
+        <Experience />
+      </Reveal>
+
+      <Reveal>
+        <Contact />
+      </Reveal>
+    </main>
   );
 }
