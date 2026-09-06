@@ -217,33 +217,98 @@ export default function HeroVisual() {
           </p>
         </div>
       </div>
-
         {/* System flow */}
-        <div className="relative mt-6 h-px bg-white/10">
+        <div className="relative mt-6 h-px">
 
-          {/* Permanent gradient path */}
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-300/30 via-purple-300/30 to-cyan-300/20" />
+          {/* Base path */}
+          <div className="absolute inset-0 bg-white/10" />
 
-          {/* Pipeline nodes */}
-          <div className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.7)]" />
+          {/* Subtle colored energy path */}
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-300/25 via-purple-300/25 to-cyan-300/15" />
 
-          <div className="absolute left-1/3 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-300 shadow-[0_0_18px_rgba(216,180,254,0.8)]" />
+          {/* DATA node */}
+          <motion.div
+            className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-cyan-300"
+            animate={{
+              scale: [1, 1.8, 1, 1, 1],
+              opacity: [0.6, 1, 0.6, 0.6, 0.6],
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              repeatDelay: 2.5,
+              times: [0, 0.05, 0.12, 0.7, 1],
+              ease: "easeInOut",
+            }}
+          />
 
-          <div className="absolute left-2/3 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/80" />
+          {/* INTELLIGENCE node */}
+          <motion.div
+            className="absolute left-1/3 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-300"
+            animate={{
+              scale: [1, 1, 1.9, 1, 1],
+              opacity: [0.55, 0.55, 1, 0.55, 0.55],
+              boxShadow: [
+                "0 0 8px rgba(216,180,254,0.25)",
+                "0 0 8px rgba(216,180,254,0.25)",
+                "0 0 24px rgba(216,180,254,0.9)",
+                "0 0 8px rgba(216,180,254,0.25)",
+                "0 0 8px rgba(216,180,254,0.25)",
+              ],
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              repeatDelay: 2.5,
+              times: [0, 0.26, 0.34, 0.43, 1],
+              ease: "easeInOut",
+            }}
+          />
 
-          <div className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-cyan-300/60" />
+          {/* SERVING node */}
+          <motion.div
+            className="absolute left-2/3 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/80"
+            animate={{
+              scale: [1, 1, 1, 1.8, 1],
+              opacity: [0.5, 0.5, 0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              repeatDelay: 2.5,
+              times: [0, 0.55, 0.62, 0.68, 1],
+              ease: "easeInOut",
+            }}
+          />
+
+          {/* OBSERVE node */}
+          <motion.div
+            className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-cyan-300/60"
+            animate={{
+              scale: [1, 1, 1, 1, 1.8, 1],
+              opacity: [0.45, 0.45, 0.45, 0.45, 1, 0.45],
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              repeatDelay: 2.5,
+              times: [0, 0.55, 0.75, 0.88, 0.96, 1],
+              ease: "easeInOut",
+            }}
+          />
 
           {/* Traveling signal */}
           <motion.div
-            className="absolute top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_14px_rgba(103,232,249,0.95),0_0_28px_rgba(216,180,254,0.55)]"
+            className="absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_12px_rgba(103,232,249,0.95)]"
             animate={{
-              left: ["0%", "33%", "66%", "100%"],
+              left: ["0%", "33.333%", "66.666%", "100%"],
               opacity: [0, 1, 1, 0],
             }}
             transition={{
               duration: 5.5,
               repeat: Infinity,
               repeatDelay: 2.5,
+              times: [0, 0.33, 0.66, 1],
               ease: "easeInOut",
             }}
           />
