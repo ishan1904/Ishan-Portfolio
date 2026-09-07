@@ -49,8 +49,8 @@ export default function Projects() {
             </h3>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-gray-400">
-              A full-stack AI academic workflow platform built for intelligent document
-              processing, evaluation, retrieval, and structured feedback generation.
+             A full-stack AI academic workflow platform that turns imperfect academic
+              documents into structured, reliable AI-assisted workflows.
               The system combines OCR, LLM orchestration, RAG pipelines, validation
               layers, caching, and backend infrastructure to handle real-world academic
               workflows reliably at scale.
@@ -99,48 +99,92 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Workflow visual */}
+          {/* System architecture */}
           <div className="border-t border-white/10 bg-black/30 p-8 lg:border-l lg:border-t-0 md:p-10">
-            <p className="text-sm font-medium text-white">Workflow</p>
+            <p className="text-xs font-medium uppercase tracking-[0.24em] text-cyan-300/70">
+              System Architecture
+            </p>
 
-            <div className="mt-6 space-y-4">
+            <h4 className="mt-3 text-xl font-semibold text-white">
+              From imperfect documents to structured intelligence.
+            </h4>
+
+            <div className="relative mt-8 space-y-5">
               {[
-                "Document Upload",
-                "OCR & Parsing",
-                "Retrieval Pipeline",
-                "LLM Orchestration",
-                "Structured Responses",
-              ].map((step, index) => (
-                <div key={step} className="flex items-center gap-4">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-300/10 text-sm text-cyan-200">
-                    {index + 1}
+                {
+                  label: "Input",
+                  title: "Academic Documents",
+                  detail: "PDF uploads · imperfect scans",
+                },
+                {
+                  label: "Extraction",
+                  title: "OCR & Parsing",
+                  detail: "Gemini OCR · text normalization",
+                },
+                {
+                  label: "Retrieval",
+                  title: "RAG Layer",
+                  detail: "context retrieval · relevance",
+                },
+                {
+                  label: "Reasoning",
+                  title: "LLM Orchestration",
+                  detail: "evaluation · structured generation",
+                },
+                {
+                  label: "Output",
+                  title: "Structured Feedback",
+                  detail: "validated responses · fallback logic",
+                },
+              ].map((step, index, array) => (
+                <div key={step.title} className="relative pl-12">
+                  {/* Vertical connector */}
+                  {index < array.length - 1 && (
+                    <div className="absolute left-[15px] top-8 h-[calc(100%+20px)] w-px bg-gradient-to-b from-cyan-300/25 to-white/5" />
+                  )}
+
+                  {/* Node */}
+                  <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/[0.06]">
+                    <span className="h-2 w-2 rounded-full bg-cyan-300/80" />
                   </div>
 
-                  <div className="flex-1 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-gray-300">
-                    {step}
-                  </div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+                    {step.label}
+                  </p>
+
+                  <p className="mt-1 text-sm font-medium text-white">
+                    {step.title}
+                  </p>
+
+                  <p className="mt-1 text-xs leading-5 text-gray-500">
+                    {step.detail}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {[
-                ["98%", "OCR reliability"],
-                ["2.3s", "avg response"],
-                ["RAG", "retrieval pipeline"],
-                ["Multi-LLM", "fallback orchestration"],
-              ].map(([value, label]) => (
-                <div
-                  key={label}
-                  className="rounded-2xl border border-white/10 bg-white/[0.05] p-4"
-                >
-                  <p className="text-2xl font-semibold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
-                    {value}
-                  </p>
+            {/* Reliability layer */}
+            <div className="mt-10 border-t border-white/10 pt-6">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-purple-300/70">
+                Reliability Layer
+              </p>
 
-                  <p className="mt-1 text-xs text-gray-400">{label}</p>
+              <div className="mt-4 grid grid-cols-3 gap-4 text-sm">
+                <div>
+                  <p className="font-medium text-white">Caching</p>
+                  <p className="mt-1 text-xs text-gray-500">reuse & latency control</p>
                 </div>
-              ))}
+
+                <div>
+                  <p className="font-medium text-white">Validation</p>
+                  <p className="mt-1 text-xs text-gray-500">structured output checks</p>
+                </div>
+
+                <div>
+                  <p className="font-medium text-white">Fallbacks</p>
+                  <p className="mt-1 text-xs text-gray-500">resilient workflows</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
